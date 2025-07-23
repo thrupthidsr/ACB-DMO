@@ -1,12 +1,13 @@
 {
     "version": "0.2.0",
     "configurations": [
+
       {
         "type": "mule-xml-debugger",
         "request": "launch",
         "name": "Debug Mule Application",
         "mule.project": "${workspaceFolder}",
-        "mule.runtime.args": "${config:mule.runtime.defaultArguments}"
+        "mule.runtime.args": "-M-Dsecure.key=devSecret1234678 -M-Denv=dev ${config:mule.runtime.defaultArguments}"
       }
     ]
   }

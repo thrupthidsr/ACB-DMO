@@ -1,0 +1,72 @@
+{
+  "basicConstraints": 64,
+  "criticalExtensionOIDs": [
+    "convallis",
+    "dictum"
+  ],
+  "extendedKeyUsage": [
+    "elit",
+    "tempor"
+  ],
+  "extensions": [
+    {
+      "criticality": false,
+      "oid": "ac"
+    }
+  ],
+  "issuerAlternativeNames": [
+    {
+      "name": "Cary",
+      "type": 44
+    }
+  ],
+  "issuerDN": {
+    "commonName": "Pellentesque",
+    "name": "Cornell"
+  },
+  "issuerUniqueID": [
+    false,
+    true,
+    false
+  ],
+  "issuerX500Principal": {
+    "name": "Clifford"
+  },
+  "keyUsage": [
+    false,
+    false
+  ],
+  "name": "Coleman",
+  "nonCriticalExtensionOIDs": [
+    "erat",
+    "In",
+    "at"
+  ],
+  "publicKey": {
+    "algorithm": "Lorem",
+    "modulus": 77,
+    "params": 12,
+    "publicKey": "justo"
+  },
+  "serialNumber": 43,
+  "serialNumberObject": {
+    "serialNumber": 66
+  },
+  "sigAlgName": "at",
+  "sigAlgOID": "Nam",
+  "subjectAlternativeNames": [
+    {
+      "name": "Alan",
+      "type": 57
+    }
+  ],
+  "subjectDN": {
+    "commonName": "erat",
+    "name": "Carlo"
+  },
+  "subjectX500Principal": {
+    "name": "Alisha"
+  },
+  "type": "lectus",
+  "version": 13
+}

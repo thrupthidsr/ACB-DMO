@@ -1,0 +1,13 @@
+<mule xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:salesforce="http://www.mulesoft.org/schema/mule/salesforce" xmlns:secure-properties="http://www.mulesoft.org/schema/mule/secure-properties" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd     http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd  http://www.mulesoft.org/schema/mule/salesforce http://www.mulesoft.org/schema/mule/salesforce/current/mule-salesforce.xsd  http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd  http://www.mulesoft.org/schema/mule/secure-properties http://www.mulesoft.org/schema/mule/secure-properties/current/mule-secure-properties.xsd">
+  <http:listener-config basePath="${http.basePath}" name="Listener-config">
+    <http:listener-connection host="${http.host}" port="${http.port}"></http:listener-connection>
+  </http:listener-config>
+  <salesforce:sfdc-config name="Sfdc-config-new">
+    <salesforce:basic-connection password="${secure::sf.securePassword}" securityToken="${secure::sf.secureToken}" username="${sf.username}"></salesforce:basic-connection>
+  </salesforce:sfdc-config>
+  <configuration-properties doc:name="Configuration properties" file="${env}-config.yaml"></configuration-properties>
+  <configuration-properties doc:name="Configuration properties" file="secure-${env}.yaml"></configuration-properties>
+  <secure-properties:config doc:id="e19b7d7f-fbea-4039-99e7-4efe9a425baf" doc:name="Secure Properties Config" file="secure-${env}.yaml" key="${secure.key}" name="Secure_Properties_Config">
+    <secure-properties:encrypt algorithm="AES"></secure-properties:encrypt>
+  </secure-properties:config>
+</mule>

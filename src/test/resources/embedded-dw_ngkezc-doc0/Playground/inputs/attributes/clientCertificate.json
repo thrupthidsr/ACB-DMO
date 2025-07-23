@@ -1,0 +1,75 @@
+{
+  "basicConstraints": 82,
+  "criticalExtensionOIDs": [
+    "sit",
+    "nisi",
+    "risus"
+  ],
+  "extendedKeyUsage": [
+    "vitae",
+    "dui",
+    "at"
+  ],
+  "extensions": [
+    {
+      "criticality": false,
+      "oid": "molestie"
+    }
+  ],
+  "issuerAlternativeNames": [
+    {
+      "name": "Abel",
+      "type": 26
+    }
+  ],
+  "issuerDN": {
+    "commonName": "sed",
+    "name": "Ammie"
+  },
+  "issuerUniqueID": [
+    false,
+    false,
+    true
+  ],
+  "issuerX500Principal": {
+    "name": "Clemente"
+  },
+  "keyUsage": [
+    true,
+    false,
+    false
+  ],
+  "name": "Coleman",
+  "nonCriticalExtensionOIDs": [
+    "ipsum",
+    "Nam",
+    "tempor"
+  ],
+  "publicKey": {
+    "algorithm": "sit",
+    "modulus": 28,
+    "params": 88,
+    "publicKey": "risus"
+  },
+  "serialNumber": 29,
+  "serialNumberObject": {
+    "serialNumber": 65
+  },
+  "sigAlgName": "nisi",
+  "sigAlgOID": "ipsum",
+  "subjectAlternativeNames": [
+    {
+      "name": "Abigail",
+      "type": 81
+    }
+  ],
+  "subjectDN": {
+    "commonName": "semper",
+    "name": "Abigail"
+  },
+  "subjectX500Principal": {
+    "name": "Abram"
+  },
+  "type": "Lorem",
+  "version": 30
+}

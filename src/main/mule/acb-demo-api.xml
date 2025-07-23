@@ -1,6 +1,42 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<mule xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd">
-  
+<mule xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:db="http://www.mulesoft.org/schema/mule/db" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:salesforce="http://www.mulesoft.org/schema/mule/salesforce" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd  http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd  http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd  http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/current/mule-db.xsd  http://www.mulesoft.org/schema/mule/salesforce http://www.mulesoft.org/schema/mule/salesforce/current/mule-salesforce.xsd">
+    
+    <flow name="http-healthCheck-flow">
+        <http:listener config-ref="Listener-config" doc:id="vxbrzy" doc:name="healthCheck" path="/healthCheck"></http:listener>
+        <logger doc:name="Log Begin" doc:id="nmojwh" message="Healthcheck Flow Begins"/>
+        <ee:transform doc:id="gvcusr" doc:name="Set Response">
+            <ee:message>
+                <ee:set-payload doc:id="rqcady" doc:name="Set payload"><![CDATA[%dw 2.0
+        output application/json
+        ---
+        {
+          "message": "App is up and running"
+        }]]></ee:set-payload>
+            </ee:message>
+        </ee:transform>
+        <logger doc:name="Log End" doc:id="hrqpdz" message="Healthcheck Flow Ends"/>
+    </flow>
+    <flow name="http-createAccount-flow">
+        <http:listener allowedMethods="POST" config-ref="Listener-config" doc:id="rcjpfy" doc:name="Create Account" path="/create"></http:listener>
+        <logger doc:name="Log Begin" doc:id="omsclw" message="Create Account flow begins"/>
+        <ee:transform doc:name="Set payload" doc:id="yclkzj" >
+            <ee:message >
+                <ee:set-payload doc:name="Set payload" doc:id="xfrlqh" ><![CDATA[%dw 2.0
+        output application/java
+        ---
+       [ payload ]]]></ee:set-payload>
+            </ee:message>
+        </ee:transform>
+        <salesforce:upsert config-ref="Sfdc-config-new" doc:id="kmidkt" doc:name="Create Account" externalIdFieldName="Id" objectType="Account"/>
+        <ee:transform doc:name="Response" doc:id="gfinvq" >
+            <ee:message >
+                <ee:set-payload doc:name="Set payload" doc:id="ngkezc" ><![CDATA[%dw 2.0
+        output application/json
+        ---
+        
+          payload
+        ]]></ee:set-payload>
+            </ee:message>
+        </ee:transform>
+        <logger doc:name="Log End" doc:id="qvtvxs" message="Create Account flow ends"/>
+    </flow>
 </mule>

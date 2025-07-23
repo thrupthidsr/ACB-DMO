@@ -1,0 +1,72 @@
+{
+  "basicConstraints": 77,
+  "criticalExtensionOIDs": [
+    "dolor",
+    "arcu",
+    "viverra"
+  ],
+  "extendedKeyUsage": [
+    "sed",
+    "sodales"
+  ],
+  "extensions": [
+    {
+      "criticality": false,
+      "oid": "molestie"
+    }
+  ],
+  "issuerAlternativeNames": [
+    {
+      "name": "Allyn",
+      "type": 87
+    }
+  ],
+  "issuerDN": {
+    "commonName": "dolor",
+    "name": "Charley"
+  },
+  "issuerUniqueID": [
+    false,
+    false
+  ],
+  "issuerX500Principal": {
+    "name": "Adolph"
+  },
+  "keyUsage": [
+    false,
+    true,
+    true
+  ],
+  "name": "Alvera",
+  "nonCriticalExtensionOIDs": [
+    "sit",
+    "amet"
+  ],
+  "publicKey": {
+    "algorithm": "sit",
+    "modulus": 74,
+    "params": 19,
+    "publicKey": "nunc"
+  },
+  "serialNumber": 65,
+  "serialNumberObject": {
+    "serialNumber": 8
+  },
+  "sigAlgName": "Aliquam",
+  "sigAlgOID": "risus",
+  "subjectAlternativeNames": [
+    {
+      "name": "Bud",
+      "type": 54
+    }
+  ],
+  "subjectDN": {
+    "commonName": "venenatis",
+    "name": "Adelle"
+  },
+  "subjectX500Principal": {
+    "name": "Aleida"
+  },
+  "type": "tincidunt",
+  "version": 26
+}
