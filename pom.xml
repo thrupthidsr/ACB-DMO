@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.mycompany</groupId>
-    <artifactId>acb-demo-api</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <groupId>287b9444-686a-4380-89b0-363217b5e1a4</groupId>
+    <artifactId>acb-demo-api-kt</artifactId>
+    <version>1.0.2</version>
     <packaging>mule-application</packaging>
     <name>ACB Demo API</name>
     <properties>

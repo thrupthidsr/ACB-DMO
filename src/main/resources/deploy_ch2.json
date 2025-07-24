@@ -1,0 +1,11 @@
+{
+  "applicationName": "acbdemoapi",
+  "runtime": "4.9.7:23e-java17",
+  "replicas": 1,
+  "replicaSize": "0.1",
+  "deploymentModel": "rolling",
+  "properties": {
+    "env": "dev",
+    "secure.key": "devSecret1234678"
+  }
+}
